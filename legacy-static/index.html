@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>D'Green Resto & Coffee — Pause, Relax, Linger</title>
+  <meta name="description" content="D'Green Resto & Coffee, Jl. Selabintana No.54, Sukabumi. Pause, relax, linger." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Brand mark (arch + leaves, after the D'Green logo) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mark" viewBox="0 0 40 64">
+      <rect x="2" y="2" width="36" height="60" rx="18" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M20 4 V60" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M20 34 C10 34 4 28 4 22 C12 22 18 26 20 34Z M20 34 C30 34 36 28 36 22 C28 22 22 26 20 34Z" fill="currentColor"/>
+      <path d="M20 50 C10 50 4 44 4 38 C12 38 18 42 20 50Z M20 50 C30 50 36 44 36 38 C28 38 22 42 20 50Z" fill="currentColor"/>
+    </symbol>
+    <!-- leaf: base at 0,0 pointing up, length 100 -->
+    <defs><g id="leaf">
+      <path class="leaf-blade" d="M0 0 C-26 -22 -30 -62 0 -100 C30 -62 26 -22 0 0Z"/>
+      <path class="leaf-vein" d="M0 0 C-1 -35 0 -70 0 -98 M0 -22 L-14 -40 M0 -40 L-16 -60 M0 -58 L-12 -76 M0 -22 L14 -40 M0 -40 L16 -60 M0 -58 L12 -76"/>
+    </g></defs>
+  </svg>
+
+  <header class="site-header" id="header">
+    <a href="#top" class="brand" aria-label="D'Green home">
+      <svg class="brand-mark"><use href="#mark"/></svg>
+      <span class="brand-name">D'Green</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+      <a class="nav-cta" href="https://wa.me/6282112093485" target="_blank" rel="noopener">Reserve</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========== HERO: the gate ========== -->
+    <section class="hero" id="top">
+      <div class="hero-sticky">
+        <!-- what you see through the gate -->
+        <div class="hero-inside">
+          <div class="hero-glow"></div>
+          <div class="hero-title" id="heroTitle">
+            <p class="eyebrow">Resto &amp; Coffee · Sukabumi</p>
+            <h1>D'GREEN</h1>
+            <p class="tagline">Pause · Relax · Linger</p>
+          </div>
+        </div>
+
+        <!-- the wall with the arched gate cut out -->
+        <svg class="hero-layer hero-wall" id="heroWall" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <radialGradient id="wallShade" cx="50%" cy="55%" r="70%">
+              <stop offset="0" stop-color="#1d3d37"/>
+              <stop offset="0.55" stop-color="#132b27"/>
+              <stop offset="1" stop-color="#0a1816"/>
+            </radialGradient>
+            <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e2c98f"/>
+              <stop offset="1" stop-color="#9c7d45"/>
+            </linearGradient>
+            <pattern id="stone" width="80" height="40" patternUnits="userSpaceOnUse">
+              <path d="M0 39.5 H80 M40 0 V20 M0 20 H80 M0 20 V40" stroke="#ffffff" stroke-opacity="0.025" stroke-width="1" fill="none"/>
+            </pattern>
+          </defs>
+          <path fill-rule="evenodd" fill="url(#wallShade)"
+            d="M-400 -400 H2000 V1400 H-400Z
+               M580 1100 V470 C580 320 690 220 800 140 C910 220 1020 320 1020 470 V1100Z"/>
+          <path fill-rule="evenodd" fill="url(#stone)"
+            d="M-400 -400 H2000 V1400 H-400Z
+               M580 1100 V470 C580 320 690 220 800 140 C910 220 1020 320 1020 470 V1100Z"/>
+          <!-- arch frame: double brass line like the sketch -->
+          <path class="arch-line" d="M580 1100 V470 C580 320 690 220 800 140 C910 220 1020 320 1020 470 V1100" stroke="url(#brass)" stroke-width="3" fill="none"/>
+          <path class="arch-line" d="M556 1100 V470 C556 306 676 196 800 112 C924 196 1044 306 1044 470 V1100" stroke="url(#brass)" stroke-width="1.2" fill="none" opacity="0.7"/>
+          <!-- floor line / horizon from the sketch -->
+          <path d="M-200 82 H1800" stroke="url(#brass)" stroke-width="1" opacity="0.35"/>
+        </svg>
+
+        <!-- leaves flanking the gate (two depths for parallax) -->
+        <svg class="hero-layer leaves leaves-back" id="leavesBack" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g class="tone-2">
+            <g transform="translate(260 560) rotate(62) scale(3.4)"><use href="#leaf" class="sway s1"/></g>
+            <g transform="translate(1340 560) rotate(-62) scale(3.4)"><use href="#leaf" class="sway s2"/></g>
+            <g transform="translate(220 760) rotate(80) scale(3.8)"><use href="#leaf" class="sway s2"/></g>
+            <g transform="translate(1380 760) rotate(-80) scale(3.8)"><use href="#leaf" class="sway s3"/></g>
+            <g transform="translate(300 980) rotate(70) scale(3.4)"><use href="#leaf" class="sway s3"/></g>
+            <g transform="translate(1300 980) rotate(-70) scale(3.4)"><use href="#leaf" class="sway s1"/></g>
+            <g transform="translate(120 420) rotate(50) scale(3.0)"><use href="#leaf" class="sway s1"/></g>
+            <g transform="translate(1480 420) rotate(-50) scale(3.0)"><use href="#leaf" class="sway s2"/></g>
+          </g>
+        </svg>
+        <svg class="hero-layer leaves leaves-front" id="leavesFront" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g class="tone-1">
+            <g transform="translate(140 640) rotate(75) scale(4.2)"><use href="#leaf" class="sway s1"/></g>
+            <g transform="translate(1460 640) rotate(-75) scale(4.2)"><use href="#leaf" class="sway s2"/></g>
+            <g transform="translate(80 880) rotate(88) scale(4.6)"><use href="#leaf" class="sway s2"/></g>
+            <g transform="translate(1520 880) rotate(-88) scale(4.6)"><use href="#leaf" class="sway s3"/></g>
+            <g transform="translate(200 1060) rotate(58) scale(4.0)"><use href="#leaf" class="sway s3"/></g>
+            <g transform="translate(1400 1060) rotate(-58) scale(4.0)"><use href="#leaf" class="sway s1"/></g>
+          </g>
+          <g class="tone-3">
+            <g transform="translate(-20 500) rotate(66) scale(3.6)"><use href="#leaf" class="sway s1"/></g>
+            <g transform="translate(1620 500) rotate(-66) scale(3.6)"><use href="#leaf" class="sway s2"/></g>
+            <g transform="translate(360 1080) rotate(40) scale(3.0)"><use href="#leaf" class="sway s2"/></g>
+            <g transform="translate(1240 1080) rotate(-40) scale(3.0)"><use href="#leaf" class="sway s3"/></g>
+          </g>
+        </svg>
+
+        <div class="scroll-cue" id="scrollCue">
+          <span>Step inside</span>
+          <i></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MENU: the book ========== -->
+    <section class="menu" id="menu">
+      <div class="menu-sticky">
+        <div class="menu-head">
+          <p class="eyebrow">Menu 2025</p>
+          <h2>Turn the pages</h2>
+        </div>
+
+        <div class="book-stage">
+          <div class="book" id="book" aria-label="D'Green menu book">
+            <div class="book-shadow"></div>
+            <div class="book-spine"></div>
+            <!-- leaves are built by script.js -->
+          </div>
+        </div>
+
+        <div class="menu-foot">
+          <nav class="chapters" id="chapters" aria-label="Menu chapters"></nav>
+          <div class="page-meter">
+            <span id="pageLabel">Cover</span>
+            <div class="meter"><i id="meterFill"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== VISIT / CONTACT ========== -->
+    <section class="visit" id="visit">
+      <div class="visit-inner">
+        <div class="visit-intro">
+          <svg class="visit-mark"><use href="#mark"/></svg>
+          <p class="eyebrow">Visit us</p>
+          <h2>A table is waiting<br/><em>under the leaves.</em></h2>
+          <p class="lede">A new dining experience that brings you genuine happiness — savoury plates, slow coffee and fresh Selabintana air.</p>
+          <div class="visit-actions">
+            <a class="btn btn-solid" href="https://wa.me/6282112093485" target="_blank" rel="noopener">Reserve on WhatsApp</a>
+            <a class="btn btn-ghost" href="https://maps.google.com/?cid=16384022236019004967" target="_blank" rel="noopener">Get directions</a>
+          </div>
+        </div>
+
+        <div class="visit-cards">
+          <div class="card">
+            <h3>Address</h3>
+            <p>Jl. Selabintana No.54, Selabatu,<br/>Kec. Cikole, Kota Sukabumi,<br/>Jawa Barat 43114</p>
+          </div>
+          <div class="card">
+            <h3>Hours</h3>
+            <p>Monday – Sunday<br/>11:00 – 22:00</p>
+            <p class="muted">Last order 21:00</p>
+          </div>
+          <div class="card">
+            <h3>Reservations</h3>
+            <p><a href="tel:+622666250889">(0266) 6250 889</a><br/><a href="tel:+6282112093485">+62 821 1209 3485</a></p>
+          </div>
+          <div class="card">
+            <h3>Follow</h3>
+            <p><a href="https://instagram.com/dgreenrestoandcoffee" target="_blank" rel="noopener">@dgreenrestoandcoffee</a></p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <span>© 2026 D'Green Resto &amp; Coffee</span>
+        <span>Pause · Relax · Linger</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
