@@ -7,6 +7,12 @@ npm install
 npm run dev   # http://localhost:3000
 ```
 
+## Deploy (GitHub Pages)
+Every push to `main` runs `.github/workflows/pages.yml`, which builds a static export
+(`output: "export"`) under the `/dgreen-website/` sub-path and publishes it to
+https://rizano1.github.io/dgreen-website/.
+One-time setup: in the repo on GitHub, open **Settings → Pages** and set **Source** to **GitHub Actions**.
+
 ## Sections
 - **Hero** (`src/components/Hero.tsx`): arched gate with leaves; scrolling zooms through the gate.
 - **Menu book** (`src/components/MenuBook.tsx`): the 2025 menu (`public/menu/p-01.jpg … p-42.jpg`) turns page by page on scroll.

@@ -1,5 +1,7 @@
 export const MENU_PAGES = 42;
-export const menuPageSrc = (n: number) => `/menu/p-${String(n).padStart(2, "0")}.jpg`;
+// prefixed with the GitHub Pages sub-path when built for Pages (see next.config.ts)
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+export const menuPageSrc = (n: number) => `${BASE}/menu/p-${String(n).padStart(2, "0")}.jpg`;
 
 // First page of each chapter in the printed 2025 menu
 export const CHAPTERS: [name: string, page: number][] = [
